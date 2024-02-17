@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    
+    <script src="portfolio.js"></script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" alt="" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>WEB DESIGNER</p>
+                <h3>Hi!!, I'm Dhanush kumar</h3>
+            </div>
+        </div>
+
+    </div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <h1 class="sub-title">About Me</h1><br/>
+                <p>A hard working individual looking for a challenging position where I can showcase my skills and contribute to the growth of the organization.</p>
+
+                <div class="tab-titles">
+                   
+                   
+                </div>
+                <div class="tab-contents active-tab">
+                    <p class="tab-links active_link">Skills:</p>
+                    <ul>
+                        
+                        <li><span>Web Designing</span><br/>(HTML,CSS,JAVAScript)</li>
+                        <li><span>Python</span><br/>(math,random modules)<br/>numpy library</li>
+                        <li><span>SQLite</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents">
+                    <p class="tab-links">Education:</p>
+                    <ul>
+                        
+                        <li><span>2020-2023</span><br/>NarsimhaReddy Engineering Collge<br/>Electronics and Communication Engineering(B.Tech)</li>
+                        <li><span>2017-2020</span><br/>V.M.R Polytechnic College<br/>Diploma in E.C.E </li>
+                        <li><span>2016-2017</span><br/>Blue Bells High School<br/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="certifications">
+    <div class="container">
+        <h1 class="sub-title">Certifications</h1>
+        <div class="services-list">
+            <div>
+                <h2 class="certi">TATA STRIVE RIGHT SKILLS BRIGHT FUTURE</h2><br>
+                <p class="certi">Successfull completition for the role of web Designing from Kasreddy Narayanareddy College of Engineering and Research<br/>Hyderabad</p><br/>
+                <h2>Cisco Netorking Academy</h2><br/>
+                <p>Successfull completition of Python Essentials1 provided by Cisco Networking Academy.</p><br/>
+                <h2>ScholarHat</h2><br/>
+                <p>Successfully completed the 5days workshop on Frontend Development in ScholarHat </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="portfolio.png" alt="">
+                <div class="layer">
+                    <h4>portfolio</h4>
+                </div>
+            </div>
+            <div class="work">
+                <img src="forms.png" alt="">
+                <h4>Registration forms</h4>
+            </div>
+            <div class="work">
+                <img src="landingpage.png" alt="">
+                <h4>Landing pages</h4>
+            </div>
+            <div class="work">
+                <img src="tictactoe.png" alt="">
+                <h4>Tic Tac Toe</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact</h1>
+                <p><i class="fa-solid fa-envelope"></i> kandakatladhanush02@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 91+9912956512</p><br/>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/dhanush-kumar-kandakatla-36228426b/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BppsEYyt1Sa2jTdQ7PvWl0w%3D%3D">.<i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/dhanush_2001_/?hl=en#">.<i class="fa-brands fa-instagram"></i></a><br>
+                    <a href="DHANUSH RESUME (2).pdf"><button class="butn">view CV</button></a>
+                </div>
+            </div><br>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email id" required>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwC3Hj164U5ivTk4jSu5HJeW3lvugfzlpWWMrXzlGDXUrdjlFgalZSlINcZ89a8q2ef7A/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
